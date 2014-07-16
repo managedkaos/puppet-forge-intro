@@ -16,7 +16,7 @@ curl -s -w "%{http_code}\n" -o /dev/null `hostname`.cloudapp.net
 # Install the Puppet Modules
 puppet module install puppetlabs-vcsrepo
 puppet module install puppetlabs-apache
-wget https://raw.githubusercontent.com/managedkaos/linuxla-puppet/master/linuxla-puppet.pp
+wget https://raw.githubusercontent.com/managedkaos/puppet-forge-intro/master/apache-vcsrepo.pp
 sudo puppet apply linuxla-puppet.pp
 
 # Check the Environment
