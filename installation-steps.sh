@@ -13,7 +13,9 @@ service apache2 status
 puppet resource service apache2
 curl -s -w "%{http_code}\n" -o /dev/null `hostname`.cloudapp.net
 
-# Install the Puppet Modules
+# Search for and Install the Puppet Modules
+puppet module search puppetlabs-vcsrepo
+puppet module search puppetlabs-apache
 puppet module install puppetlabs-vcsrepo
 puppet module install puppetlabs-apache
 wget https://raw.githubusercontent.com/managedkaos/puppet-forge-intro/master/apache-vcsrepo.pp
