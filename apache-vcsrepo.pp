@@ -18,5 +18,5 @@ apache::vhost { $::hostname:
 vcsrepo { $docroot:
     ensure   => present,
     provider => git,
-    source   => "https://github.com/managedkaos/linuxla-puppet.git"
+    source   => "https://github.com/managedkaos/puppet-forge-intro.git"
 }
